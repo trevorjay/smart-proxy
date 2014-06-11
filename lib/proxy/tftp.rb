@@ -102,7 +102,7 @@ module Proxy::TFTP
       destination = Pathname.new("#{SETTINGS.tftproot}/#{dst}-#{filename}")
 
       # Ensure that our image directory exists
-      # as the dst might contain another sub directory
+      # as the dst might contain another sub directory #
       FileUtils.mkdir_p destination.parent
 
       wget = which("wget")
